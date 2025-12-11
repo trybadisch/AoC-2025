@@ -13,18 +13,17 @@ for i in lines[0]:
 
     for j in range(s,e+1):
 
+        length = len(str(j))
+        chars = str(j)
+
         # Part 1
-        if len(str(j)) % 2 == 0:
-            half = int(len(str(j))/2)
-            chars = str(j)
+        if length % 2 == 0:
+            half = int(length / 2)
 
             if chars[0:half] == chars[half:]:
                 count1.append(j)
         
         # Part 2
-        length = len(str(j))
-        chars = str(j)
-
         for str1 in range(0,length):
             for str2 in range(str1+1, length):
                 len_dup = len(chars[str1:str1+str2])
