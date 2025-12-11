@@ -12,7 +12,7 @@ def part1():
             if len(str(j)) % 2 == 0:
                 half = int(len(str(j))/2)
                 chars = str(j)
-                
+
                 if chars[0:half] == chars[half:]:
                     count.append(j)
 
@@ -33,11 +33,10 @@ def part2():
 
             for str1 in range(0,length):
                 for str2 in range(str1+1, length):
-                    l_str = len(chars)
-                    l_dup = len(chars[str1:str1+str2])
+                    len_dup = len(chars[str1:str1+str2])
 
-                    if l_str % l_dup == 0:
-                        div = int(l_str / l_dup)
+                    if length % len_dup == 0:
+                        div = int(length / len_dup)
                         rest = str(chars[str1:str1+str2]) * div
 
                         if rest == chars:
